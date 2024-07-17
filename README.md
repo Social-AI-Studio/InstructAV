@@ -5,7 +5,9 @@ A public repository containing datasets and code for the paper "InstructAV: Inst
 ![InstructAV](https://github.com/user-attachments/assets/ed6c978b-0a92-4535-a51f-bfcb538686b2)
 
 ### Installation
-> pip install -r code/requirements.txt
+```
+pip install -r model/requirements.txt
+```
 
 ### Dataset
 The dataset includes samples selected from the IMDB, Twitter, and Yelp datasets. 
