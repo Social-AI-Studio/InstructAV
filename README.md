@@ -2,6 +2,9 @@
 
 A public repository containing datasets and code for the paper "InstructAV: Instruction Fine-tuning Large Language Models for Authorship Verification"
 
+### Installation
+> pip install -r code/requirements.txt
+
 ### Dataset
 The dataset includes samples selected from the IMDB, Twitter, and Yelp datasets. 
 
