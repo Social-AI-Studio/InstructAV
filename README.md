@@ -2,6 +2,8 @@
 
 A public repository containing datasets and code for the paper "InstructAV: Instruction Fine-tuning Large Language Models for Authorship Verification"
 
+![InstructAV](https://github.com/user-attachments/assets/ed6c978b-0a92-4535-a51f-bfcb538686b2)
+
 ### Installation
 > pip install -r code/requirements.txt
 
@@ -18,13 +20,40 @@ After preparing all data for relevant tasks, we train individual modules for eac
 Example usage for multiple GPUs:
 
 > WORLD_SIZE=2 CUDA_VISIBLE_DEVICES=0,1 torchrun --nproc_per_node=2 --master_port=3192 finetune.py \
-    --base_model 'yahma/llama-7b-hf' \
-    --data_path 'math_10k.json' \
-    --output_dir './trained_models/llama-lora' \
-    --batch_size 16 \
-    --micro_batch_size 4 \
-    --num_epochs 3 \
-    --learning_rate 3e-4 \
-    --cutoff_len 256 \
-    --val_set_size 120 \
-    --adapter_name lora
+        --base_model 'yahma/llama-7b-hf' \
+        --data_path 'data/[dataset].json' \
+        --output_dir './trained_models/llama-lora' \
+        --batch_size 16 \
+        --micro_batch_size 4 \
+        --num_epochs 3 \
+        --learning_rate 3e-4 \
+        --cutoff_len 256 \
+        --val_set_size 120 \
+        --adapter_name lora
+
+Example usage for Single GPUs:
+
+> CUDA_VISIBLE_DEVICES=0 python finetune.py \
+      --base_model 'yahma/llama-7b-hf' \
+      --data_path 'data/[dataset].json' \
+      --output_dir './trained_models/llama-lora' \
+      --batch_size 16 \
+      --micro_batch_size 4 \
+      --num_epochs 3 \
+      --learning_rate 3e-4 \
+      --cutoff_len 256 \
+      --val_set_size 120 \
+      --adapter_name lora
+
+
+### Evaluation (evaluate.py)
+
+To evaluate the performance of the finetuned model, you can use the following command:
+
+> CUDA_VISIBLE_DEVICES=0 python evaluate.py 
+        --model LLaMA-7B \ 
+        --adapter LoRA \
+        --dataset SVAMP \ 
+        --base_model 'yahma/llama-7b-hf' \
+        --lora_weights './trained_models/llama-lora'
+  
