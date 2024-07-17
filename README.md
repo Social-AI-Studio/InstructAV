@@ -52,7 +52,7 @@ CUDA_VISIBLE_DEVICES=0 python finetune.py \
 ```
 
 
-### Evaluation (evaluate.py)
+### Evaluation
 
 To evaluate the performance of the finetuned model, you can use the following command:
 
