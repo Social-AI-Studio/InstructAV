@@ -29,11 +29,11 @@ Example usage for multiple GPUs:
         --learning_rate 3e-4 \
         --cutoff_len 256 \
         --val_set_size 120 \
-        --adapter_name lora```
+        --adapter_name lora'''
 
 Example usage for Single GPUs:
 
-'''CUDA_VISIBLE_DEVICES=0 python finetune.py \
+```CUDA_VISIBLE_DEVICES=0 python finetune.py \
       --base_model 'yahma/llama-7b-hf' \
       --data_path 'data/[dataset].json' \
       --output_dir './trained_models/llama-lora' \
@@ -50,7 +50,7 @@ Example usage for Single GPUs:
 
 To evaluate the performance of the finetuned model, you can use the following command:
 
-'''CUDA_VISIBLE_DEVICES=0 python evaluate.py 
+```CUDA_VISIBLE_DEVICES=0 python evaluate.py 
         --model LLaMA-7B \ 
         --adapter LoRA \
         --dataset SVAMP \ 
