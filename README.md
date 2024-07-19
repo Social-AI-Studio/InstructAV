@@ -4,6 +4,22 @@ A public repository containing datasets and code for the paper "InstructAV: Inst
 
 ![InstructAV](https://github.com/user-attachments/assets/ed6c978b-0a92-4535-a51f-bfcb538686b2)
 
+Please leave issues for any questions about the paper or the code.
+
+If you find our code or paper useful, please cite the paper:
+```
+@misc{hu2024instructavinstructionfinetuninglarge,
+      title={InstructAV: Instruction Fine-tuning Large Language Models for Authorship Verification}, 
+      author={Yujia Hu and Zhiqiang Hu and Chun-Wei Seah and Roy Ka-Wei Lee},
+      year={2024},
+      eprint={2407.12882},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL},
+      url={https://arxiv.org/abs/2407.12882}, 
+}
+```
+
+
 ### Installation
 ```
 pip install -r model/requirements.txt
