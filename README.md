@@ -1,6 +1,6 @@
 ## InstructAV: Instruction Fine-tuning Large Language Models for Authorship Verification
 
-A public repository containing datasets and code for the paper ["InstructAV: Instruction Fine-tuning Large Language Models for Authorship Verification"]: https://arxiv.org/abs/2407.12882 (COLM 2024)
+A public repository containing datasets and code for the paper "InstructAV: Instruction Fine-tuning Large Language Models for Authorship Verification" https://arxiv.org/abs/2407.12882 (COLM 2024)
 
 ![InstructAV](https://github.com/user-attachments/assets/ed6c978b-0a92-4535-a51f-bfcb538686b2)
 
